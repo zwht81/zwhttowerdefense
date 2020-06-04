@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/startbutton.png</file>
+        <file>image/menu.jpg</file>
+        <file>image/entrance.jpg</file>
+        <file>image/home.jpg</file>
+        <file>image/player.jpg</file>
+        <file>image/player2.jpg</file>
+        <file>image/startgame.jpg</file>
+        <file>image/GreenBottle.png</file>
+        <file>image/bullet.png</file>
+        <file>image/explosion.png</file>
+        <file>image/greenbutton.png</file>
+        <file>image/Towerarea.jpg</file>
+        <file>image/Road.png</file>
+        <file>image/Grass.png</file>
+        <file>sound/bgm.mp3</file>
+        <file>image/enemy11.png</file>
+        <file>image/start.png</file>
+        <file>image/upgrade.png</file>
+        <file>image/delete.png</file>
+        <file>sound/crash.mp3</file>
+        <file>image/win.png</file>
+    </qresource>
+</RCC>
