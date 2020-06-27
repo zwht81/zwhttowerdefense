@@ -8,14 +8,20 @@
 
 using namespace std;
 
+
+塔基类
 class Tower
 {
 public:
     Tower();
-    void initialtower(int x,int y);//初始化
+    virtual void initialtower(int x,int y);//初始化
     void show(QPainter * painter);//画画
-    int GetX() const;     //获取横坐标
-    int GetY() const;     //获取横坐标
+    int GetX() const{
+        return x;
+    }     //获取横坐标
+    int GetY() const{
+        return y;
+    }     //获取横坐标
     int getrange() const{  //返回range
         return range;
     }
@@ -26,11 +32,13 @@ public:
     int getpower()const{
         return power;
     }
-    void upgrade();
+    virtual void upgrade(); //升级
+    virtual void attack();
 
 
 
-private:
+
+protected:
     QPixmap towerpic; //图标
     int x;   //位置
     int y;

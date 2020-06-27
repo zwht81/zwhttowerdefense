@@ -4,19 +4,20 @@
 #include <QPainter>
 #include <cmath>
 #include <QMediaPlayer>
-
+//子弹类
 class Bullet
 {
 public:
     Bullet();
     void move();
     void show(QPainter * painter);
-    void initialbullet(int x,int y);
+    void initialbullet(int x,int y,QString bulletpict,QString explodepic);
     void setbullet();  //初始化子弹
     bool crash();   //子弹boom
     void settarget(int x,int y);//子弹找敌人
     bool hasenemy;  //是否有敌人，没有就不画
     bool isexploded; //是否boom，没有不画boom
+
 private:
     int x;
     int y;

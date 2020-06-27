@@ -12,9 +12,9 @@ void Tower::initialtower(int x,int y){
     this->x=x;
     this->y=y+40;
     range=200;
-    bullet.initialbullet(this->x,this->y);
+    bullet.initialbullet(this->x,this->y,QString(":/image/bullet.png"),QString(":/image/explosion.png"));
     hasbullet=true;
-    power=14;
+    power=140;
     width=80;
     height=80;
     level=0;
@@ -46,15 +46,7 @@ void Tower::show(QPainter *painter){
     this->bullet.show(painter);
 }
 
-int Tower::GetX() const     //获取横坐标
-{
-    return x;
-}
 
-int Tower::GetY() const     //获取横坐标
-{
-    return y;
-}
 
 void Tower::upgrade(){
     power+=10;
@@ -64,5 +56,30 @@ void Tower::upgrade(){
     range+=30;
 }
 
+
+void Tower::attack(){
+    if((this)->hasbullet||(this)->targetenemy==NULL)
+        (this)->bullet.setbullet();
+
+
+    if((this)->targetenemy){
+        (this)->bullet.settarget((this)->targetenemy->getx()+40,(this)->targetenemy->gety()+40);
+        (this)->bullet.move();
+        (this)->hasbullet=false;
+
+    }
+    if((this)->bullet.crash()){
+        (this)->hasbullet=true;
+        (this)->bullet.isexploded=true;
+        (this)->targetenemy->injure((this)->getpower());
+        if((this)->targetenemy->death()){
+            (this)->settarget(NULL);
+            (this)->bullet.hasenemy=false;
+        }
+
+    }
+    else
+        (this)->bullet.isexploded=false;
+}
 
 

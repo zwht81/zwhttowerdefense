@@ -36,7 +36,17 @@ SOURCES += \
     towerarea.cpp \
     tower.cpp \
     buildtowerbutton.cpp \
-    bullet.cpp
+    bullet.cpp \
+    tower1.cpp \
+    enemybird.cpp \
+    enemymushroom.cpp \
+    enemyturtle.cpp \
+    tower2.cpp \
+    tower3.cpp \
+    tower4.cpp \
+    levelchoose.cpp \
+    introduce.cpp \
+    form.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -49,10 +59,21 @@ HEADERS += \
     towerarea.h \
     tower.h \
     buildtowerbutton.h \
-    bullet.h
+    bullet.h \
+    tower1.h \
+    enemybird.h \
+    enemymushroom.h \
+    enemyturtle.h \
+    tower2.h \
+    tower3.h \
+    tower4.h \
+    levelchoose.h \
+    introduce.h \
+    form.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    form.ui
 
 RESOURCES += \
     game.qrc

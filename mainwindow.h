@@ -13,12 +13,17 @@
 #include <QMouseEvent>
 #include "buildtowerbutton.h"
 #include <QPushButton>
-
+#include "tower1.h"
+#include "tower2.h"
+#include "tower3.h"
+#include "tower4.h"
+#include <QMediaPlayer>
 
 using namespace std;
 
 namespace Ui {
 class MainWindow;
+class levelchoose;
 }
 
 class MainWindow : public QMainWindow
@@ -26,7 +31,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = 0);
+    explicit MainWindow(int i,QString name,QWidget *parent = 0);
     void paintEvent(QPaintEvent *e); //画画函数（总）
     void timerEvent(QTimerEvent *e); //计时函数
     void mousePressEvent(QMouseEvent *ev);  //点击
@@ -45,13 +50,20 @@ private:
     Map _map;   //地图
     Player _player;  //玩家
     Game _game;  //游戏，包括塔，敌人
+    QString playername;
 
     Mybutton* playerbutton1;  //右上角按钮1，点着玩的
     Mybutton* playerbutton2;   //点着玩的2
     Mybutton* startbutton;   //开始游戏
     Buildtowerbutton* buildtowerbutton;   //建塔的按钮
+    Buildtowerbutton* buildtowerbutton2;
+    Buildtowerbutton* buildtowerbutton3;
+    Buildtowerbutton* buildtowerbutton4;
     Mybutton* levelup;  //升级按钮
     Mybutton* deletetower;//删除
+    Mybutton* losehealth;//掉血
+    Mybutton* back;//返回按钮
+    int levelnum;
 
 
     int timeid1;  //timeid

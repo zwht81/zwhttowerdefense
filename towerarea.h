@@ -1,7 +1,7 @@
 #ifndef TOWERAREA_H
 #define TOWERAREA_H
 
-
+//Ëþ¿ÓÀà
 class Towerarea
 {
 private:

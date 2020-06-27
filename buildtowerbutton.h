@@ -9,7 +9,7 @@ class Buildtowerbutton : public Mybutton
     Q_OBJECT
 public:
     Buildtowerbutton(QString pix,int n);
-    int cost;
+    int cost;//½¨Ëþ»¨·Ñ
 
 
 };

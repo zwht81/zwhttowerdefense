@@ -5,15 +5,15 @@ Bullet::Bullet()
 
 }
 
-void Bullet::initialbullet(int x, int y){
+void Bullet::initialbullet(int x,int y,QString bulletpict,QString explodepic){
     this->x=x+30;
     this->y=y+30;
     initialx=x+40;
     initialy=y+40;
     speed=100;
     hasenemy=false;
-    bulletpic.load(":/image/bullet.png");
-    explosion.load(":/image/explosion.png");
+    bulletpic.load(bulletpict);
+    explosion.load(explodepic);
     isexploded=false;
 
 
@@ -48,10 +48,7 @@ void Bullet::move(){
 
 bool Bullet::crash(){
     if(abs(x-targetx)<30&&abs(y-targety)<30){
-        QMediaPlayer * player = new QMediaPlayer;
-        player->setMedia(QUrl("qrc:/sound/crash.mp3"));
-        player->setVolume(3);
-        player->play();
+
         return true;
     }
     return false;

@@ -1,7 +1,8 @@
 #include "menu.h"
 #include "mybutton.h"
 #include "mainwindow.h"
-
+#include "levelchoose.h"
+#include "introduce.h"
 
 
 Menu::Menu(QWidget *parent) : QWidget(parent)
@@ -11,10 +12,22 @@ Menu::Menu(QWidget *parent) : QWidget(parent)
     startbutton->setParent(this);
     startbutton->move(300,150);
     menuback.load(":/image/menu.jpg");
-    MainWindow * scene=new MainWindow;
+    intro= new Mybutton(":/image/introduc.png");
+    intro->setParent(this);
+    intro->move(300,350);
+
+
+
+
+    Levelchoose* level=new Levelchoose;
+    Introduce *introdu=new Introduce;
     connect(startbutton,&QPushButton::clicked,this,[=](){
         this->close();
-        scene->show();
+        level->show();
+    });
+    connect(intro,&QPushButton::clicked,this,[=](){
+        this->close();
+        introdu->show();
     });
 
 }

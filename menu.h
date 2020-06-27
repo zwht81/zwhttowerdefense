@@ -6,6 +6,7 @@
 #include "mainwindow.h"
 #include <QPainter>
 
+//菜单界面
 class Menu : public QWidget
 {
     Q_OBJECT
@@ -18,7 +19,8 @@ signals:
 
 public slots:
 private:
-    Mybutton* startbutton;//菜单按钮
+    Mybutton* startbutton;
+    Mybutton* intro;//菜单按钮
     QImage menuback;//菜单背景
 };
 

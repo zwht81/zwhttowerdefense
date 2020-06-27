@@ -1,9 +1,7 @@
 <RCC>
     <qresource prefix="/">
-        <file>image/startbutton.png</file>
         <file>image/menu.jpg</file>
         <file>image/entrance.jpg</file>
-        <file>image/home.jpg</file>
         <file>image/player.jpg</file>
         <file>image/player2.jpg</file>
         <file>image/startgame.jpg</file>
@@ -21,5 +19,24 @@
         <file>image/delete.png</file>
         <file>sound/crash.mp3</file>
         <file>image/win.png</file>
+        <file>image/bird.png</file>
+        <file>image/turtle3.png</file>
+        <file>image/blue.png</file>
+        <file>image/bluebullet.png</file>
+        <file>image/explosion2.png</file>
+        <file>image/bluebottle.png</file>
+        <file>image/yellowbottle.png</file>
+        <file>image/yellow.png</file>
+        <file>image/redbullet.png</file>
+        <file>image/red.png</file>
+        <file>image/redbottle.png</file>
+        <file>image/explosion3.png</file>
+        <file>image/explosion4.png</file>
+        <file>image/yellowbullet.png</file>
+        <file>image/home4.png</file>
+        <file>image/blood.png</file>
+        <file>image/intro.png</file>
+        <file>image/introduc.png</file>
+        <file>image/back.png</file>
     </qresource>
 </RCC>

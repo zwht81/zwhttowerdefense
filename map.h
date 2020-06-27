@@ -8,13 +8,16 @@
 
 using namespace std;
 
+
+//地图类
 class Map
 {
 public:
     Map();
     void drawmap(QPainter* painter);  //画地图
-    void initialmap();  //初始化地图
+    void initialmap(int num);  //初始化地图
     vector<Towerarea *> _towerarea;  //塔坑放在地图里
+
 private:
     int maparr[16][27];  //地图格子
     QPixmap grass;  //草
