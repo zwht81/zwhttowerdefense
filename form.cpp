@@ -12,7 +12,7 @@ Form::Form(int i,QWidget *parent) :
 
     connect(ui->pushButton,&QPushButton::clicked,this,[=](){
         this->close();
-        MainWindow * scene=new MainWindow(2,ui->lineEdit->text());
+        MainWindow * scene=new MainWindow(levelnum,ui->lineEdit->text());
         scene->show();
 
     });

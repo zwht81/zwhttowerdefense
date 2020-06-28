@@ -32,7 +32,7 @@ Levelchoose::Levelchoose(QWidget *parent) : QMainWindow(parent)
     connect(p1,&QPushButton::clicked,[=]()
     {
         this->close();
-        Form *fo=new Form(2);
+        Form *fo=new Form(1);
         fo->show();
 
     });
