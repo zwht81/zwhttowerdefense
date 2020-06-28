@@ -37,6 +37,10 @@ public:
     void win(){
         iswin=true;
     }
+    void lose(){
+        islose=true;
+    }
+
     bool getwin()const{
         return iswin;
     }
@@ -58,6 +62,7 @@ private:
     QTimer *timer2;  //Ëþ¼ÆÊ±Æ÷
     QTimer *timer3;
     bool iswin=false;
+    bool islose;
     QMediaPlayer * player;
 
 signals:

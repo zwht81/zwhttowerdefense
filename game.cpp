@@ -185,7 +185,7 @@ bool Game::Isstart(){
 void Game::startgame(){
     player = new QMediaPlayer;
     player->setMedia(QUrl("qrc:/sound/bgm.mp3"));
-    player->setVolume(30);
+    player->setVolume(5);
     player->play();
     isstart=true;
     wave++;

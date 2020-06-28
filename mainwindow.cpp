@@ -282,7 +282,6 @@ void MainWindow::initialmainwindow(){
         if(_player.getmoney()>=20){
             _player.spendmoney(20);
 
-
             for(_game.itr2=_game._towers.begin();_game.itr2!=_game._towers.end();_game.itr2++){
                 if((*_game.itr2)->GetX()==levelup->x()-20&&(*_game.itr2)->GetY()==levelup->y()+40){
                     (*_game.itr2)->upgrade();

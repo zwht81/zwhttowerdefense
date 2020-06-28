@@ -9,7 +9,7 @@
 using namespace std;
 
 
-塔基类
+//塔基类
 class Tower
 {
 public:
